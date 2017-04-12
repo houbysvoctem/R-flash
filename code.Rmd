@@ -1,10 +1,10 @@
 
 ### sending email from R
-This can be usefull, when you need R to let you know your computation is over. Unfortunately I have not found the solution for Linux server + R 3.3.2, which I was searching for. Following solution is for Windows Vista + R 3.3.2.
+This can be usefull, when you need R to let you know your computation is over. Unfortunately I have not found the solution for Linux server + R 3.3.2, which I was searching for. The following solution is for Windows Vista + R 3.3.2.
 
 ```{r}
 #options(download.file.method="libcurl")  #can be needed
-library(mailR) #for windows
+library(mailR)
 
 send.mail('email_from','email_to',
 subject = "subject_of_email", body = "blablabla",
