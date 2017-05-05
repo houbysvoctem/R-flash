@@ -13,3 +13,29 @@ smtp = list(host.name = 'smtp.centrum.cz',port = 25, #get to know on web peages 
 user.name = 'email_from',passwd = 'password_from'),
 uthenticate = TRUE, send = TRUE)
 ```
+
+
+---
+
+### updating R in Ubuntu (14.04)
+
+terminál:
+```
+sudo gedit /etc/apt/sources.list
+```
+
+add to the end of the file and save (put your mirror into http and version of Ubuntu to the end):
+```
+deb http://mirrors.nic.cz/R/bin/linux/ubuntu/ trusty/
+```
+
+terminál (put key, that rolled down in the terminal, to your code):
+```
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 51716619E084DAB9
+```
+```
+gpg -a --export 51716619E084DAB9 | sudo apt-key add -
+```
+```
+sudo apt-get update && sudo apt-get upgrade
+```
