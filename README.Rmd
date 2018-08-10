@@ -1,1 +1,1 @@
-some tips for R
+useful things for R
